@@ -8,12 +8,12 @@ jobs:
 
     strategy:
       matrix:
-        python-version: [3.8, 3.9]
+        python-version: [3.8, 3.9]  # herewe are setting it to execute with different versions of python so we are going to be seeing two jobs runing
 
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v2    # here is installing plugins 
       with:
         python-version: ${{ matrix.python-version }}
 
